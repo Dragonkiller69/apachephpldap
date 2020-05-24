@@ -81,7 +81,7 @@ else {
         </div>
 	  <div class="ed-container">
                  <div class="ed-item"><label>Password</label></div>
-                <div class="ed-item"><input type="text"  name="password" required="true" value="<?php echo $data[0]['astaccountrealmedpassword'][0]; ?>" /></div>
+                <div class="ed-item"><input type="password"  name="password" required="true" value="<?php echo $data[0]['astaccountrealmedpassword'][0]; ?>" /></div>
         </div>
 
 	 <div class="ed-container">

@@ -22,7 +22,7 @@ if(isset($_POST['uid']) && isset($_POST['nombre']) && isset($_POST['apellido']))
                 $info['AstAccountContext']="paneschucos-default";
                 $info['AstAccountHost']="dynamic";
                 $info['AstAccountType']="friend";
-                $info['AstAccountRealmedPassword']="12345";
+                $info['AstAccountRealmedPassword']=$_POST['password'];
                 //echo "cn=admin,".$_SESSION['config']['baseLdap'];
                 //print_r($info);
          ldap_modify($ldapconn,"uid=".$_POST['uid'].",".$_SESSION['config']['baseSearch'],$info) or die("Could not update user!" . ldap_error($ldapconn));
@@ -79,6 +79,11 @@ else {
                  <div class="ed-item"><label>apellido</label></div>
                 <div class="ed-item"><input type="text"  name="apellido" required="true" value="<?php echo $data[0]['sn'][0] ?>" /></div>
         </div>
+	  <div class="ed-container">
+                 <div class="ed-item"><label>Password</label></div>
+                <div class="ed-item"><input type="text"  name="password" required="true" value="<?php echo $data[0]['astaccountrealmedpassword'][0]; ?>" /></div>
+        </div>
+
 	 <div class="ed-container">
                 <div class="ed-item"><button class="btn waves-effect waves-light s-100" type="submit" name="action">Guardar Cambios</button></div>
         </div>

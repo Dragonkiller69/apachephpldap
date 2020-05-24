@@ -80,6 +80,11 @@ else {
                  <div class="ed-item"><label>apellido</label></div>
                 <div class="ed-item"><input type="text" placeholder="apellido" name="apellido" required="true"/></div>
         </div>
+	  <div class="ed-container">
+                 <div class="ed-item"><label>Password</label></div>
+                <div class="ed-item"><input type="password"  name="password" required="true" required="true" /></div>
+        </div>
+
 	 <div class="ed-container">
                 <div class="ed-item"><button class="btn waves-effect waves-light s-100" type="submit" name="action">Registrar</button></div>
         </div>

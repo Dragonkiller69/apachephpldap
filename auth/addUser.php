@@ -19,7 +19,7 @@ if(isset($_SESSION['user'])){
 		$info['AstAccountContext']="paneschucos-default";
 		$info['AstAccountHost']="dynamic";
 		$info['AstAccountType']="friend";
-		$info['AstAccountRealmedPassword']="12345";
+		$info['AstAccountRealmedPassword']=$_POST['password'];
 		//echo "cn=admin,".$_SESSION['config']['baseLdap'];
 		//print_r($info);
 	 ldap_add($ldapconn,"uid=".$_POST['uid'].",".$_SESSION['config']['baseSearch'],$info) or die("Could not add new entry!" . ldap_error($ldapconn));
